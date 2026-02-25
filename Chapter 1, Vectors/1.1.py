@@ -20,9 +20,9 @@ for i in range(repeats):
     end = time.perf_counter()
     times.append(end - start)
 
-best_t = min(times)  # best-case timing is usually most stable
-gflops = (2 * N) / (best_t * 1e9)
+best_time = min(times)  # best-case timing is usually most stable
+gflops = (2 * N) / (best_time * 1e9)
 
 print(f"Inner product: {result}")
-print(f"Best time: {best_t:.6f} s")
+print(f"Best time: {best_time:.6f} s")
 print(f"Estimated performance: {gflops:.2f} GFLOPS/s")
